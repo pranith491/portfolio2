@@ -1,0 +1,100 @@
+* { box-sizing: border-box; }
+:root { --brown: #351b15; --brown-2: #48251b; --gold: #f3bd45; --cream: #fff1e5; --ink: #35221d; --muted: #795e52; --white: #fffdfb; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--ink); background: #fffaf6; }
+a { color: inherit; text-decoration: none; }
+.site-header { min-height: 82px; background: var(--brown); color: white; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px clamp(20px, 5.5vw, 84px); position: sticky; top: 0; z-index: 20; box-shadow: 0 4px 18px #2b130f24; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: clamp(18px, 2vw, 27px); font-weight: 700; white-space: nowrap; }
+.brand-icon { font-size: 35px; }
+.brand-gold { color: var(--gold); font-family: 'Pacifico', cursive; font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); }
+.nav-links a { font-size: 14px; padding: 10px 0; transition: color .2s ease; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-links .nav-book { border: 1px solid var(--gold); border-radius: 30px; padding: 10px 20px; }
+.menu-toggle { display: none; color: white; background: transparent; border: 0; font-size: 28px; cursor: pointer; }
+.hero { min-height: 620px; padding: 60px clamp(22px, 5.8vw, 90px) 48px; display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 30px; overflow: hidden; background: radial-gradient(circle at 90% 12%, #f5d9c4 0, transparent 26%), linear-gradient(120deg, #fff0e4, #fffaf5 70%); }
+.hero-copy { max-width: 620px; z-index: 1; }
+.eyebrow, .section-kicker { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
+.eyebrow span { color: #d49b31; padding: 0 5px; }
+h1 { margin: 18px 0 12px; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.16; letter-spacing: -2px; }
+h1 span, h2 span { color: #a76518; }
+.tagline { font-size: 19px; font-weight: 600; margin: 18px 0 8px; }
+.hero-description { max-width: 500px; line-height: 1.85; color: #6b5146; font-size: 15px; }
+.primary-button { display: inline-flex; justify-content: center; align-items: center; gap: 16px; margin-top: 18px; padding: 14px 25px; border: 0; border-radius: 30px; background: var(--brown); color: white; font: 600 15px 'Poppins', sans-serif; cursor: pointer; transition: transform .2s, background .2s; }
+.primary-button:hover { background: #6a3522; transform: translateY(-2px); }
+.features { display: flex; gap: clamp(16px, 3vw, 40px); margin-top: 38px; flex-wrap: wrap; }
+.features div { min-width: 70px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; }
+.feature-icon { width: 45px; height: 45px; display: grid; place-items: center; border-radius: 50%; background: #f7dfcd; font-size: 25px; margin-bottom: 4px; }
+.features small { color: var(--muted); font-size: 11px; }
+.hero-art { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; }
+.hero-cake { width: min(100%, 640px); max-height: 520px; object-fit: contain; filter: drop-shadow(0 20px 25px #5b2d2024); animation: float 5s ease-in-out infinite; }
+.sweet-note { position: absolute; top: 2%; right: -2%; z-index: 2; color: #8e4b2c; font-family: 'Pacifico', cursive; font-size: clamp(17px, 2vw, 25px); line-height: 1.5; transform: rotate(7deg); text-align: center; }
+.sweet-note span { display: block; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.section-pad { padding: 76px clamp(22px, 7vw, 110px); }
+.about-section { text-align: center; background: white; }
+h2 { margin: 10px 0 14px; font-size: clamp(28px, 3.3vw, 42px); letter-spacing: -1px; }
+.about-section > p:not(.section-kicker) { max-width: 760px; margin: 0 auto; line-height: 1.8; color: var(--muted); }
+.about-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 35px; text-align: left; }
+.about-cards article { padding: 28px; border: 1px solid #f0dfd2; border-radius: 18px; background: #fffaf6; }
+.about-cards article > span { font-size: 30px; }
+.about-cards h3 { margin: 13px 0 7px; }
+.about-cards p { color: var(--muted); line-height: 1.7; font-size: 14px; margin-bottom: 0; }
+.booking-section { display: grid; grid-template-columns: .75fr 1.25fr; gap: 45px; align-items: start; background: #fff0e4; }
+.booking-intro p:not(.section-kicker), .login-section p:not(.section-kicker) { color: var(--muted); line-height: 1.8; }
+.form-card { padding: 28px; border-radius: 20px; background: white; box-shadow: 0 14px 45px #4c24110e; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.form-card label { display: flex; flex-direction: column; gap: 8px; margin-bottom: 17px; font-size: 13px; font-weight: 600; }
+.form-card input, .form-card select, .form-card textarea { width: 100%; padding: 12px 13px; border: 1px solid #e8d8ce; border-radius: 10px; outline: none; background: #fffdfa; color: var(--ink); font: 400 13px 'Poppins', sans-serif; }
+.form-card input:focus, .form-card select:focus, .form-card textarea:focus { border-color: #b77a2b; box-shadow: 0 0 0 3px #f3bd4525; }
+.form-card textarea { resize: vertical; }
+.submit-button { margin-top: 4px; width: 100%; }
+.form-note, .footer-hint { font-size: 11px; color: #9a8174; line-height: 1.6; }
+.status-message { font-size: 13px; font-weight: 600; color: #287449; }
+.login-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: #fffaf6; }
+.login-card { max-width: 520px; width: 100%; justify-self: end; }
+.site-footer { padding: 42px clamp(22px, 5.5vw, 84px) 20px; color: white; background: var(--brown); }
+.footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 28px; padding-bottom: 30px; }
+.footer-grid > div { padding-right: 20px; border-right: 1px solid #ffffff26; }
+.footer-grid > div:last-child { border: 0; }
+.footer-brand p { max-width: 230px; line-height: 1.8; font-size: 13px; color: #e7d5ca; }
+.footer-grid h3 { margin: 3px 0 16px; font-size: 16px; }
+.footer-grid p { font-size: 12px; line-height: 1.9; color: #f0e2d9; overflow-wrap: anywhere; }
+.footer-grid a:hover { color: var(--gold); }
+.instagram { font-size: 14px !important; }
+.copyright { border-top: 1px solid #ffffff26; text-align: center; padding-top: 18px; font-size: 11px; color: #d9c5b9; }
+@media (max-width: 900px) {
+  .site-header { padding-inline: 22px; }
+  .menu-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 18px 24px 24px; background: var(--brown); flex-direction: column; align-items: stretch; gap: 5px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 11px 5px; }
+  .nav-links .nav-book { text-align: center; }
+  .hero { grid-template-columns: 1fr; text-align: center; padding-top: 45px; }
+  .hero-copy { margin: auto; }
+  .hero-description { margin-inline: auto; }
+  .features { justify-content: center; }
+  .hero-art { max-width: 650px; margin: 0 auto; width: 100%; }
+  .hero-cake { max-height: 430px; }
+  .sweet-note { right: 0; }
+  .booking-section { grid-template-columns: 1fr; }
+  .login-section { grid-template-columns: 1fr; gap: 20px; }
+  .login-card { justify-self: stretch; max-width: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:nth-child(2) { border-right: 0; }
+}
+@media (max-width: 560px) {
+  .site-header { min-height: 72px; }
+  .brand { font-size: 17px; gap: 5px; }
+  .brand-icon { font-size: 28px; }
+  .hero { padding-inline: 20px; }
+  h1 { letter-spacing: -1px; font-size: 38px; }
+  .eyebrow { font-size: 10px; letter-spacing: .7px; }
+  .features { gap: 18px; }
+  .section-pad { padding: 55px 20px; }
+  .about-cards, .form-grid, .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > div { border-right: 0; border-bottom: 1px solid #ffffff26; padding: 0 0 18px; }
+  .footer-grid > div:last-child { border-bottom: 0; }
+  .form-card { padding: 21px; }
+  .sweet-note { font-size: 16px; right: -4px; top: 0; }
+}

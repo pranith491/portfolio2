@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Book Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#" onclick="showPage('home'); return false;">📚 Library Book Booking</a>
+    <nav id="navLinks">
+      <button class="nav-link" onclick="showPage('home')">Home</button>
+      <button class="nav-link" onclick="showPage('bookings')">My Bookings</button>
+      <button class="nav-link" onclick="showPage('profile')">Profile</button>
+      <button class="nav-link" id="authNav" onclick="showPage('login')">Login</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="loginPage" class="page auth-page">
+      <div class="auth-card">
+        <div class="auth-icon">📖</div>
+        <h1 id="authTitle">Login</h1>
+        <p class="muted">Sign in to book your favourite books.</p>
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" placeholder="you@example.com" required>
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" placeholder="Enter password" minlength="4" required>
+          <button class="primary full" type="submit">Login</button>
+        </form>
+        <p class="switch-auth">New here? <button class="text-button" onclick="showPage('register')">Create an account</button></p>
+        <p class="demo-note">Demo project: account details are stored only in this browser.</p>
+      </div>
+    </section>
+
+    <section id="registerPage" class="page auth-page hidden">
+      <div class="auth-card">
+        <div class="auth-icon">📝</div>
+        <h1>Create Account</h1>
+        <p class="muted">Register to start booking books.</p>
+        <form id="registerForm">
+          <label for="registerName">Full name</label>
+          <input id="registerName" type="text" placeholder="Your name" required>
+          <label for="registerEmail">Email</label>
+          <input id="registerEmail" type="email" placeholder="you@example.com" required>
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" type="password" placeholder="At least 4 characters" minlength="4" required>
+          <button class="primary full" type="submit">Register</button>
+        </form>
+        <p class="switch-auth">Already registered? <button class="text-button" onclick="showPage('login')">Login</button></p>
+      </div>
+    </section>
+
+    <section id="homePage" class="page hidden">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1>Discover. Read. Grow.</h1>
+          <p>Find your next favourite book and reserve it in a few clicks.</p>
+          <div class="hero-stats">
+            <span><strong>30</strong> books to explore</span>
+            <span><strong>Easy</strong> booking</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">📚</div>
+      </div>
+      <div class="catalog-heading">
+        <div><h2>Available Books</h2><p class="muted">Choose a quantity and add books to your booking cart.</p></div>
+        <div class="catalog-tools">
+          <input id="searchInput" type="search" placeholder="Search title or author...">
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="All">All categories</option>
+            <option>Fiction</option><option>Self-help</option><option>Business</option>
+            <option>Technology</option><option>Biography</option><option>Science</option>
+          </select>
+        </div>
+      </div>
+      <div id="bookGrid" class="book-grid"></div>
+    </section>
+
+    <section id="cartPage" class="page hidden">
+      <div class="page-heading"><h1>🛒 Your Booking Cart</h1><p class="muted">Review quantities before confirming your booking.</p></div>
+      <div id="cartContent"></div>
+    </section>
+
+    <section id="bookingsPage" class="page hidden">
+      <div class="page-heading"><h1>My Bookings</h1><p class="muted">Your confirmed book reservations.</p></div>
+      <div id="bookingsContent"></div>
+    </section>
+
+    <section id="profilePage" class="page hidden">
+      <div class="page-heading"><h1>My Profile</h1><p class="muted">Your library account information.</p></div>
+      <div id="profileContent"></div>
+    </section>
+  </main>
+
+  <button id="cartFloat" class="cart-float hidden" onclick="showPage('cart')">🛒 Cart <span id="cartCount">0</span></button>
+  <div id="toast" class="toast" role="status"></div>
+  <footer>Library Book Booking · Practice project made with HTML, CSS and JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>

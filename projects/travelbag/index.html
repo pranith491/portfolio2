@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TravelBag — stylish, durable bags for every journey." />
+  <title>TravelBag | Travel Light, Explore More</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <a class="brand" href="#home" aria-label="TravelBag home"><span class="brand-icon">▣</span><span>Travel<span class="accent">Bag</span><small>Your Journey, Our Bag</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">EXPLORE · TRAVEL · DISCOVER</p>
+        <h1>Travel Light.<br /><span class="accent">Explore More.</span></h1>
+        <p class="hero-description">Meet your perfect travel companion. Stylish, durable and designed to keep up with every adventure.</p>
+        <a class="primary-button" href="#booking">Book Your Bag <span aria-hidden="true">→</span></a>
+        <div class="hero-note"><span class="note-dot"></span> Ready for your next adventure</div>
+      </div>
+      <div class="hero-product" aria-label="TravelBag backpack product image">
+        <div class="product-glow"></div>
+        <img src="images/travel-bag.png" alt="Navy blue TravelBag backpack with orange zipper accents" />
+        <div class="floating-label"><span>✦</span><div><strong>Adventure ready</strong><small>Comfort meets style</small></div></div>
+      </div>
+      <div class="hero-features" aria-label="Product benefits">
+        <article class="mini-feature"><span class="feature-icon">♢</span><div><h3>Durable Material</h3><p>Made for the long journey.</p></div></article>
+        <article class="mini-feature"><span class="feature-icon">▣</span><div><h3>Spacious Design</h3><p>Room for your essentials.</p></div></article>
+        <article class="mini-feature"><span class="feature-icon">➤</span><div><h3>Lightweight</h3><p>Carry comfort everywhere.</p></div></article>
+        <article class="mini-feature"><span class="feature-icon">⌁</span><div><h3>Adventure Ready</h3><p>From city breaks to trails.</p></div></article>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="section-heading">
+        <p class="eyebrow">READY FOR YOUR NEXT JOURNEY?</p>
+        <h2>Book your <span class="accent">TravelBag.</span></h2>
+        <p>Fill in your details and we’ll prepare your booking request.</p>
+      </div>
+      <div class="booking-layout">
+        <div class="booking-product">
+          <img src="images/travel-bag.png" alt="TravelBag navy blue backpack" />
+          <div><span class="booking-tag">TRAVEL ESSENTIAL</span><h3>TravelBag Adventure Backpack</h3><p>Durable • Spacious • Lightweight</p><div class="price">₹1,499 <small>/ bag</small></div></div>
+        </div>
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <label>Full name<input type="text" name="fullName" placeholder="Enter your name" autocomplete="name" required /></label>
+            <label>Phone number<input type="tel" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" required /></label>
+          </div>
+          <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required /></label>
+          <div class="form-row">
+            <label>Quantity<select name="quantity" id="quantity"><option value="1">1 bag</option><option value="2">2 bags</option><option value="3">3 bags</option><option value="4">4 bags</option><option value="5">5 bags</option></select></label>
+            <label>Preferred delivery date<input type="date" name="deliveryDate" id="deliveryDate" required /></label>
+          </div>
+          <label>Delivery address<textarea name="address" rows="3" placeholder="House no., street, city, PIN code" required></textarea></label>
+          <div class="booking-total"><span>Estimated total</span><strong id="bookingTotal">₹1,499</strong></div>
+          <button class="primary-button booking-submit" type="submit">Submit Booking <span aria-hidden="true">→</span></button>
+          <p class="form-note">Demo booking only — this form does not take payment or send data to a server.</p>
+          <div class="booking-message" id="bookingMessage" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="benefits" id="about">
+      <div class="section-heading"><p class="eyebrow">MADE FOR THE WAY YOU MOVE</p><h2>Every journey starts with <span class="accent">the right bag.</span></h2><p>Thoughtful details for everyday commutes, weekend getaways and big adventures.</p></div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span>✈</span><h3>Travel Friendly</h3><p>Your reliable companion for trips, tours and daily use.</p></article>
+        <article class="benefit-card"><span>♢</span><h3>Built to Last</h3><p>A sturdy design that is ready to go places with you.</p></article>
+        <article class="benefit-card"><span>▣</span><h3>Room for More</h3><p>Keep your travel essentials neatly organised.</p></article>
+        <article class="benefit-card"><span>➤</span><h3>Easy to Carry</h3><p>Comfortable style for the road ahead.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#home"><span class="brand-icon">▣</span><span>Travel<span class="accent">Bag</span><small>Your Journey, Our Bag</small></span></a><p>Better bags. Bigger journeys.<br />Travel the world with confidence.</p></div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#contact">Contact</a><a href="#about">About</a><a href="#booking">Booking</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+      <div><h3>Contact Us</h3><p>☎ <a href="tel:+919876543210">+91 98765 43210</a></p><p>✉ <a href="mailto:travelbag@example.com">travelbag@example.com</a></p><p>⌖ Hyderabad, India</p></div>
+      <div><h3>Follow Us</h3><p class="insta-line">◎ <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">@travelbag_official</a></p><p>Follow along for travel inspiration, updates and new arrivals.</p></div>
+    </div>
+    <div class="copyright">© <span id="year">2026</span> TravelBag. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

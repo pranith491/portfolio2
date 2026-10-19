@@ -1,0 +1,14 @@
+PRANITH 3D PORTFOLIO
+
+Run locally:
+1. Extract the ZIP.
+2. Open the Pranith_3D_Portfolio folder in VS Code.
+3. Open index.html with the VS Code Live Server extension, or open index.html in a browser.
+
+Before publishing:
+- Replace the placeholder email and profile links in index.html.
+- Confirm the skills and project descriptions match your resume and actual work.
+- The ShopEasy upload contained image assets only, so its card links to the assets folder.
+- For best results, use an internet connection for the Google Fonts. The rest of the layout is local.
+
+No README file is included, as requested.

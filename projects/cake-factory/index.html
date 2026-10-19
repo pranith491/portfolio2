@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranith Cake Factory | Sweet Moments Forever</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <a class="brand" href="#home" aria-label="Pranith Cake Factory home">
+      <span class="brand-icon">🧁</span>
+      <span><span class="brand-gold">Pranith</span> Cake Factory</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
+      <a href="#booking" class="nav-book">Booking</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Freshly Baked <span>•</span> Made with Love <span>•</span> Always Special</p>
+        <h1>Welcome to<br><span>Pranith Cake Factory</span></h1>
+        <p class="tagline">Life is better with cake! 🎂</p>
+        <p class="hero-description">We bake happiness in every bite. Enjoy fresh ingredients, rich flavours and beautiful cake designs made for your most special moments.</p>
+        <a class="primary-button" href="#booking">Order Now <span>→</span></a>
+        <div class="features">
+          <div><span class="feature-icon">🧁</span><strong>Fresh</strong><small>Ingredients</small></div>
+          <div><span class="feature-icon">♡</span><strong>Custom</strong><small>Designs</small></div>
+          <div><span class="feature-icon">✧</span><strong>Premium</strong><small>Quality</small></div>
+          <div><span class="feature-icon">☺</span><strong>Happy</strong><small>Customers</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="sweet-note">Sweet Moments<br>Forever <span>♡</span></div>
+        <img src="cake.png" alt="Beautiful 3D chocolate birthday cake from Pranith Cake Factory" class="hero-cake">
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <p class="section-kicker">A little sweetness goes a long way</p>
+      <h2>Made with love, <span>baked for you</span></h2>
+      <p>At Pranith Cake Factory, every cake is made to bring people together. From birthdays and anniversaries to little everyday celebrations, we make each order with care and creativity.</p>
+      <div class="about-cards">
+        <article><span>🍓</span><h3>Fresh Ingredients</h3><p>Carefully selected ingredients for delightful flavour.</p></article>
+        <article><span>🎨</span><h3>Custom Cakes</h3><p>Choose a flavour and share your dream cake design.</p></article>
+        <article><span>🎁</span><h3>Every Occasion</h3><p>Sweet treats for birthdays, parties and celebrations.</p></article>
+      </div>
+    </section>
+
+    <section class="booking-section section-pad" id="booking">
+      <div class="booking-intro">
+        <p class="section-kicker">Your celebration, your cake</p>
+        <h2>Book your <span>dream cake</span></h2>
+        <p>Tell us what you would love, and we’ll get in touch to confirm your order.</p>
+      </div>
+      <form id="bookingForm" class="form-card">
+        <div class="form-grid">
+          <label>Full name<input type="text" name="customerName" placeholder="Enter your name" required></label>
+          <label>Phone number<input type="tel" name="phone" placeholder="Enter your phone number" pattern="[0-9+() -]{7,18}" required></label>
+          <label>Cake flavour
+            <select name="flavour" required>
+              <option value="">Choose a flavour</option>
+              <option>Chocolate</option><option>Black Forest</option><option>Red Velvet</option>
+              <option>Vanilla</option><option>Butterscotch</option><option>Strawberry</option>
+            </select>
+          </label>
+          <label>Weight
+            <select name="weight" required>
+              <option value="">Choose weight</option><option>500 g</option><option>1 kg</option><option>1.5 kg</option><option>2 kg</option><option>3 kg or more</option>
+            </select>
+          </label>
+          <label>Required date<input type="date" name="date" id="bookingDate" required></label>
+          <label>Message on cake<input type="text" name="message" placeholder="e.g. Happy Birthday!"></label>
+        </div>
+        <label>Additional details<textarea name="details" rows="3" placeholder="Describe your cake design or special requests"></textarea></label>
+        <button type="submit" class="primary-button submit-button">Send Booking Request →</button>
+        <p class="form-note">Demo form: requests are shown on this page only; no server or email is connected yet.</p>
+        <p id="bookingMessage" class="status-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="login-section section-pad" id="login">
+      <div>
+        <p class="section-kicker">Welcome back</p>
+        <h2>Customer <span>Login</span></h2>
+        <p>Use this demo form to try the login interface. Real account authentication requires a backend.</p>
+      </div>
+      <form id="loginForm" class="form-card login-card">
+        <label>Email address<input type="email" name="email" placeholder="you@example.com" required></label>
+        <label>Password<input type="password" name="password" placeholder="Enter password" minlength="4" required></label>
+        <button type="submit" class="primary-button submit-button">Login</button>
+        <p id="loginMessage" class="status-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#home"><span class="brand-icon">🧁</span><span><span class="brand-gold">Pranith</span> Cake Factory</span></a>
+        <p>Making your special moments sweeter, one cake at a time.</p>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>☎ <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>✉ <a href="mailto:pranithcakefactory@gmail.com">pranithcakefactory@gmail.com</a></p>
+        <p>♧ Hyderabad, Telangana</p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <p class="instagram">📸 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">@pranith_cake_factory</a></p>
+        <p class="footer-hint">Replace this demo Instagram link with your profile URL.</p>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <p>⌖ Plot No. 12, Green Park Colony,<br>Madhapur, Hyderabad,<br>Telangana - 500081</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Pranith Cake Factory. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
